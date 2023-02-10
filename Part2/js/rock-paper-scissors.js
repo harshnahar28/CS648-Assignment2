@@ -1,38 +1,39 @@
 /*eslint-env browser*/
 
-var myChoice;
-var computerChoice;
+var me;
+var computer;
 
-function playGame() {
-    "use strict";
+function rps(){
+    "use strict";"
     var num;
         
     do {
-    myChoice = window.prompt("What do you want: Rock, Paper or Scissors?");
-    myChoice= myChoice.toUpperCase()
+    me = window.prompt("Rock destroys scissors. Scissors cut paper. Paper covers rock."+"br>"+"Rock,Paper or Scissors, What would you like to choose?");
+    me= me.toLowerCase()
    
-      if (myChoice !== "ROCK" && myChoice !== "SCISSORS" && myChoice !== "PAPER") {
-            window.alert("That is an invalid input. Please choose again!"); 
+      if (me !== "rock" && me !== "scissors" && me !== "paper") {
+            window.alert("Ivalid input. Please choose again!"); 
         } 
-    } while (myChoice !== "ROCK" && myChoice !== "SCISSORS" && myChoice !== "PAPER");
+    } while (me !== "rock" && me !== "scissors" && me !== "paper");
     
-    num = Math.random();
-    if (num < 0.3) {
-        computerChoice = "ROCK";
-    } else if (num > 0.6) {
-        computerChoice = "PAPER";
+    n = Math.random();
+    //Returns a number between 0 to 1
+    if (n < 0.3) {
+        computer = "rock";
+    } else if (n > 0.6) {
+        computer = "paper";
     } else {
-        computerChoice = "SCISSORS";
+        computer = "scissors";
     }
     
-    if (myChoice === computerChoice) {
-        window.alert("It is a TIE!")
+    if (me === computer) {
+        window.alert("Both did same so match drawn");
     } 
-    else if (myChoice === "ROCK" && computerChoice === "SCISSORS" || myChoice === "SCISSORS" && computerChoice === "PAPER" || myChoice === "PAPER" && computerChoice === "ROCK") {
-        window.alert("You choose " + myChoice + "\nComputer chose " + computerChoice + "\nYou Win!");
+    else if (me === "rock" && computer === "scissors" || me === "scissors" && computer === "paper" || me === "paper" && computer === "rock") {
+        window.alert("You choose " + me + "\nComputer chose " + computer + "\nYou Win!");
     } 
     else {
-        window.alert("You choose " + myChoice + "\nComputer chose " + computerChoice + "\nYou Lose!");
+        window.alert("You choose " + me + "\nComputer chose " + computer + "\nYou Lose!");
         
     }
 }
@@ -40,11 +41,11 @@ function playGame() {
 
 function main() {
     "use strict"
-    var playAgain = "y";  
-    while (playAgain === "y") {
-        playGame();
-        playAgain = window.prompt("Do you want to play again? (y/n)");
-        if(playAgain == "n"){
+    var play = "y";  
+    while (play === "y") {
+        rps()
+        play = window.prompt("Press y to play again and n to quit");
+        if(play == "n"){
             break;
         }
     }
