@@ -8,7 +8,7 @@ function rps(){
     var num;
         
     do {
-    me = window.prompt("Rock destroys scissors. Scissors cut paper. Paper covers rock."+"br>"+"Rock,Paper or Scissors, What would you like to choose?");
+    me = window.prompt("Rock destroys scissors. Scissors cut paper. Paper covers rock."+"<br>"+"Rock,Paper or Scissors, What would you like to choose?");
     me= me.toLowerCase()
    
       if (me !== "rock" && me !== "scissors" && me !== "paper") {
