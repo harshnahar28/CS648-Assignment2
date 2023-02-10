@@ -4,8 +4,8 @@ var me;
 var computer;
 
 function rps(){
-    "use strict";"
-    var num;
+    "use strict";
+    var n;
         
     do {
     me = window.prompt("Rock destroys scissors. Scissors cut paper. Paper covers rock. Rock,Paper or Scissors, What would you like to choose?");
@@ -43,7 +43,7 @@ function main() {
     "use strict"
     var play = "y";  
     while (play === "y") {
-        rps()
+        rps();
         play = window.prompt("Press y to play again and n to quit");
         if(play == "n"){
             break;
