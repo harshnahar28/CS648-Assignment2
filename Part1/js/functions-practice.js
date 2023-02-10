@@ -3,46 +3,52 @@
 //STEP 1
 var number;
 
-function halfNumber() {
-    "use strict";
-    window.document.write("Half of " + number + " is " + number / 2 + ".<br>");
+number = parseFloat(prompt("Please enter a number to be halved:"));
+halfNumber(number);
+
+function halfNumber(number) {
+    
+    document.write("Half of " + number + " is " + number / 2 + ".");
 }
 
-number = parseFloat(window.prompt("STEP 1. Half of a number. \nEnter a number:"));
-halfNumber();
 
 //STEP 2
 var number;
-function squareNumber() {
-    "use strict";
-    window.document.write("The result of squaring the number " + number + " is " + number * number + ".<br>");
+
+number = parseFloat(prompt("Please enter a number whose square you want:"));
+squareNumber(number);
+
+function squareNumber(number) {
+    
+    document.write("<br>"+"The result of squaring the number " + number + " is " + number * number + ".");
 }
 
-number = parseFloat(window.prompt("STEP 2. Squaring a number. \nEnter a number:"));
-squareNumber();
+
 
 //STEP 3
-var firstNumber, secondNumber;
+var numberOne, numberTwo;
 
-function percentOf() {
-    "use strict";
-    window.document.write(firstNumber + " is " + firstNumber / secondNumber * 100 + "% of " + secondNumber + ".<br>");
+numberOne = parseFloat(prompt("Please enter the first number to check how much % the first number is of the second number:"));
+numberTwo = parseFloat(prompt("Enter a second number:"));
+percentOf(numberOne, numberTwo);
+
+function percentOf(numberOne, numberTwo) {
+    
+    document.write("<br>"+numberOne + " is " + numberOne / numberTwo * 100 + "% of " + numberTwo + ".");
 }
 
-firstNumber = parseFloat(window.prompt("STEP 3. Percent the first number represents of the second number. \nEnter a first number:"));
-secondNumber = parseFloat(window.prompt("Enter a second number:"));
-percentOf();
+
 
 //STEP 4
-var firstModNumber;
-var secondModNumber;
+var numberOneMod, numberTwoMod;
 
-function findModulus() {
-    "use strict";
-    var mod = firstModNumber % secondModNumber;
-    window.document.write(mod + " is the modulus of " + firstModNumber + " and " + secondModNumber + ".<br>");
+numberOneMod = parseFloat(prompt("To find the modulus of the two numbers. \nEnter a first number:"));
+numberTwoMod = parseFloat(prompt("Enter a second number:"));
+findModulus(numberOneMod, numberTwoMod);
+
+function findModulus(numberOneMod, numberTwoMod) {
+    
+    var mod = numberOneMod % numberTwoMod;
+    document.write("<br>"+mod + " is the modulus of " + numberOneMod + " and " + numberTwoMod + ".");
 }
 
-firstModNumber = parseFloat(window.prompt("STEP 4. The modulus of the two numbers. \nEnter a first number:"));
-secondModNumber = parseFloat(window.prompt("Enter a second number:"));
-findModulus();
